@@ -3,7 +3,7 @@
 @tailwind utilities;
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
 }
 
 *,
@@ -14,3 +14,7 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 100vh;
+  width: 100vw;
+}
