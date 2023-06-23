@@ -1,5 +1,3 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./router/router.tsx";
 import Sidebar from "./components/Sidebar.tsx";
 
 function CreateCard() {
@@ -28,7 +26,6 @@ function App() {
   return (
     <div className="flex min-h-screen min-w-screen h-full w-full bg-neutral-700">
       <Sidebar />
-      <RouterProvider router={router} />
     </div>
   );
 }

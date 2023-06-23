@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { MdHome, MdNoteAlt, MdSettings } from 'react-icons/md';
 
 const Sidebar = () => {

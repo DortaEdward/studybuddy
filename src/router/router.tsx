@@ -6,7 +6,7 @@ const Home = () => { return(<div>Home</div>)}
 
 const router = createHashRouter([
   { path:'/',
-    element: <Home />,
+    element: <App />,
     children:undefined,
   }
 ],) 
