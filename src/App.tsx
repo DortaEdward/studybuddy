@@ -1,5 +1,6 @@
 import Sidebar from "./components/Sidebar.tsx";
-
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from "./pages/Home.tsx";
 function CreateCard() {
   <>
     <div className="w-[480px] h-[360px] bg-neutral-800 rounded text-gray-200 flex flex-col items-center justify-between py-4">
@@ -24,8 +25,13 @@ function CreateCard() {
 
 function App() {
   return (
-    <div className="flex min-h-screen min-w-screen h-full w-full bg-neutral-700">
-      <Sidebar />
+    <div className="flex h-full w-full bg-neutral-700">
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route element={<Home />} path="/" />
+        </Routes>
+      </Router>
     </div>
   );
 }
