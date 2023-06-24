@@ -13,6 +13,9 @@ const logoPath = path.join(process.env.PUBLIC, 'logo.png');
 function createWindow() {
   win = new BrowserWindow({
     icon: logoPath,
+    width:800,
+    height:600,
+    resizable:false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -37,7 +40,7 @@ app.on('window-all-closed', () => {
 
 app.whenReady().then(() => {
   createWindow()
-  const appIcon = new Tray(logoPath)
+  // const appIcon = new Tray(logoPath)
 });
 
 // IPCMAIN

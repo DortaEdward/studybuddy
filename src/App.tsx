@@ -7,7 +7,7 @@ import Settings from "./pages/Settings.tsx";
 
 /*
   in order to use functions from the back-end
-  window.Bridge.functionName()
+  window.ApiKey.functionName()
 */
 function CreateCard() {
   <>
