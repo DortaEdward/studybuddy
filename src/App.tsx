@@ -4,6 +4,11 @@ import Home from "./pages/Home.tsx";
 import Boards from "./pages/Boards.tsx";
 import Practice from "./pages/Practice.tsx";
 import Settings from "./pages/Settings.tsx";
+
+/*
+  in order to use functions from the back-end
+  window.Bridge.functionName()
+*/
 function CreateCard() {
   <>
     <div className="w-[480px] h-[360px] bg-neutral-800 rounded text-gray-200 flex flex-col items-center justify-between py-4">

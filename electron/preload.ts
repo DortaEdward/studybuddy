@@ -1,4 +1,4 @@
-import { IpcRenderer } from "electron";
+import { ipcRenderer, contextBridge } from "electron";
 
 function domReady(condition: DocumentReadyState[] = ['complete', 'interactive']) {
   return new Promise(resolve => {
@@ -27,9 +27,21 @@ const safeDOM = {
   },
 }
 
-/**
- * https://tobiasahlin.com/spinkit
- * https://connoratherton.com/loaders
- * https://projects.lukehaas.me/css-loaders
- * https://matejkustec.github.io/SpinThatShit
- */
+/*
+  IPCRenderer Example
+  
+  function func(params){
+    code
+    ipcRenderer.send("event",data);
+  }
+
+  object that contains functions
+  let bridge = {
+    func,
+    ...otherFunctions
+  }
+
+  contextBridge.exposeInMainWorld(APINAME,object || function)
+  contextBridge.exposeInMainWorld("Bridge",bridge)
+
+*/
